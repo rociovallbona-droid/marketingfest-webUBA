@@ -184,12 +184,14 @@
   .sponsors-wrap .section-title{ color:var(--white); }
   .sponsors-wrap .section-lead{ color:var(--blue-light); }
   .sp-sub{ font-family:var(--display); font-weight:800; font-size:20px; text-transform:uppercase; margin:0 0 16px; color:var(--orange); }
-  .sponsor-grid{ display:grid; grid-template-columns:repeat(auto-fill,minmax(170px,190px)); gap:14px; list-style:none; margin:0 0 48px; padding:0; }
-  .sponsor-grid li:not(.sponsor-slot){ background:var(--white); border-radius:3px; aspect-ratio:3/2; display:flex; align-items:center; justify-content:center; padding:18px; }
-  .sponsor-grid.main{ grid-template-columns:minmax(0,260px); }
-  .sponsor-slot{ aspect-ratio:3/2; border:1.5px dashed var(--blue); border-radius:3px; display:flex; align-items:center; justify-content:center;
+  .sponsor-grid{ display:grid; grid-template-columns:repeat(auto-fill,190px); gap:14px; list-style:none; margin:0 0 48px; padding:0; }
+  .sponsor-grid li{ min-width:0; height:120px; overflow:hidden; }
+  .sponsor-grid li:not(.sponsor-slot){ background:var(--white); border-radius:3px; display:flex; align-items:center; justify-content:center; padding:18px; }
+  .sponsor-grid.main{ grid-template-columns:260px; }
+  .sponsor-grid.main li{ height:150px; }
+  .sponsor-slot{ border:1.5px dashed var(--blue); border-radius:3px; display:flex; align-items:center; justify-content:center;
     color:var(--blue); font-weight:700; font-size:14px; letter-spacing:1.5px; text-transform:uppercase; text-align:center; padding:12px; }
-  .sponsor-grid img{ max-width:100%; max-height:100%; object-fit:contain; display:block; }
+  .sponsor-grid img{ display:block; width:auto; height:auto; max-width:100%; max-height:100%; object-fit:contain; }
   .orgs h3{ font-family:var(--display); font-weight:800; font-size:20px; text-transform:uppercase; margin:0 0 16px; color:var(--orange); }
   .orgs ul{ list-style:none; margin:0; padding:0; display:flex; flex-wrap:wrap; gap:10px; }
   .orgs li{ background:var(--white); color:var(--navy); font-weight:600; font-size:14px; padding:9px 14px; border-radius:3px; }
@@ -207,9 +209,11 @@
     .card{ max-width:420px; width:100%; margin:0 auto; min-height:0; }
   }
   @media (max-width: 600px){
-    .sponsor-grid{ grid-template-columns:repeat(3,1fr); gap:10px; margin-bottom:36px; }
-    .sponsor-grid li:not(.sponsor-slot){ padding:10px; }
-    .sponsor-grid.main{ grid-template-columns:minmax(0,220px); }
+    .sponsor-grid{ grid-template-columns:repeat(3,minmax(0,1fr)); gap:8px; margin-bottom:32px; }
+    .sponsor-grid li{ height:64px; }
+    .sponsor-grid li:not(.sponsor-slot){ padding:8px; }
+    .sponsor-grid.main{ grid-template-columns:minmax(0,200px); }
+    .sponsor-grid.main li{ height:90px; }
     .sponsor-slot{ font-size:12px; letter-spacing:1px; }
     .header-inner{ height:auto; padding:16px; flex-wrap:wrap; gap:14px; }
     .logos{ gap:24px; }
@@ -493,19 +497,19 @@
   </ul>
   <h3 class="sp-sub">Marcas que nos acompañan</h3>
   <ul class="sponsor-grid">
-    <li><img src="sponsors/flashtag.png" alt="Flashtag"></li>
-    <li><img src="sponsors/marca-aliada.png" alt="Marca que nos acompaña"></li>
-    <li><img src="sponsors/dt-comunicacion.png" alt="DT Comunicación"></li>
-    <li><img src="sponsors/sosh-burger.png" alt="Sosh Burger"></li>
+    <li><img src="sponsors/flashtag.png" alt="Flashtag" width="160" height="80"></li>
+    <li><img src="sponsors/marca-aliada.png" alt="Marca que nos acompaña" width="160" height="80"></li>
+    <li><img src="sponsors/dt-comunicacion.png" alt="DT Comunicación" width="160" height="80"></li>
+    <li><img src="sponsors/sosh-burger.png" alt="Sosh Burger" width="160" height="80"></li>
   </ul>
   <h3 class="sp-sub">Apoyo institucional</h3>
   <ul class="sponsor-grid">
-    <li><img src="sponsors/cace.png" alt="CACE — Cámara Argentina de Comercio Electrónico"></li>
-    <li><img src="sponsors/dma.png" alt="DMA — Data &amp; Marketing Association Argentina"></li>
-    <li><img src="sponsors/ecommerce-institute.png" alt="eCommerce Institute"></li>
-    <li><img src="sponsors/cece.png" alt="CECE — Centro de Estudiantes de Ciencias Económicas"></li>
-    <li><img src="sponsors/uba-posgrado-enap.png" alt="UBA Económicas Posgrado — ENAP"></li>
-    <li><img src="sponsors/graduados.png" alt="Secretaría de Graduados — Económicas UBA"></li>
+    <li><img src="sponsors/cace.png" alt="CACE — Cámara Argentina de Comercio Electrónico" width="160" height="80"></li>
+    <li><img src="sponsors/dma.png" alt="DMA — Data &amp; Marketing Association Argentina" width="160" height="80"></li>
+    <li><img src="sponsors/ecommerce-institute.png" alt="eCommerce Institute" width="160" height="80"></li>
+    <li><img src="sponsors/cece.png" alt="CECE — Centro de Estudiantes de Ciencias Económicas" width="160" height="80"></li>
+    <li><img src="sponsors/uba-posgrado-enap.png" alt="UBA Económicas Posgrado — ENAP" width="160" height="80"></li>
+    <li><img src="sponsors/graduados.png" alt="Secretaría de Graduados — Económicas UBA" width="160" height="80"></li>
   </ul>
   <div class="orgs">
     <h3>Organizan</h3>
