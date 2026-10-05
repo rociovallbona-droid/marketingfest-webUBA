@@ -113,6 +113,15 @@
   .err-msg{ color:#c62828; font-size:12px; margin-top:6px; display:none; }
   .field.error .err-msg{ display:block; }
 
+  .field .label{ display:block; font-size:13px; font-weight:500; margin-bottom:10px; color:#1a1a1a; }
+  .days{ display:grid; grid-template-columns:repeat(3,1fr); gap:8px; }
+  .day-opt{ position:relative; cursor:pointer; }
+  .day-opt input{ position:absolute; opacity:0; inset:0; margin:0; cursor:pointer; }
+  .day-opt span{ display:flex; align-items:center; justify-content:center; text-align:center; min-height:42px; padding:6px 4px;
+    border:1.5px solid var(--line); border-radius:3px; font-size:13px; font-weight:600; color:var(--navy); line-height:1.15; }
+  .day-opt input:checked + span{ background:var(--navy); border-color:var(--navy); color:var(--white); }
+  .day-opt input:focus-visible + span{ outline:3px solid var(--orange); outline-offset:2px; }
+  .field.error .day-opt span{ border-color:#c62828; }
   .consent{ display:flex; gap:10px; align-items:flex-start; margin:6px 0 24px; font-size:13px; line-height:1.4; color:#1a1a1a; cursor:pointer; }
   .consent input{ width:17px; height:17px; margin:1px 0 0; accent-color:var(--orange); flex:0 0 17px; cursor:pointer; }
 
@@ -277,6 +286,15 @@
         <div class="err-msg">Completá tu teléfono.</div>
       </div>
 
+      <div class="field" data-required data-type="radio">
+        <span class="label" id="lbl-dias">¿Qué día vas a asistir? <span class="req">*</span></span>
+        <div class="days" role="radiogroup" aria-labelledby="lbl-dias">
+          <label class="day-opt"><input type="radio" name="dias" value="Martes 27"><span>Martes 27</span></label>
+          <label class="day-opt"><input type="radio" name="dias" value="Miércoles 28"><span>Miércoles 28</span></label>
+          <label class="day-opt"><input type="radio" name="dias" value="Ambos días"><span>Ambos días</span></label>
+        </div>
+        <div class="err-msg">Elegí qué día vas a asistir.</div>
+      </div>
       <div class="field" data-required data-type="dni">
         <label for="dni">DNI <span class="req">*</span></label>
         <div class="input-wrap"><input id="dni" name="dni" type="text" inputmode="numeric" maxlength="10" placeholder="DNI (sin puntos)"></div>
@@ -357,8 +375,8 @@
         </li>
         <li class="spk panel">
           <div class="spk-top"><div class="avatar-stack"><img src="speakers/porfa-giuli-santi.jpg" alt="Giuliana Lourdes y Santino Bellizzi (Porfa Café)" loading="lazy" width="160" height="160"><img src="speakers/kora-male-facu.jpg" alt="Malena Riesgo y Facundo Mey (Con El Kora)" loading="lazy" width="160" height="160"></div><div><span class="time">16:15</span><h4>Panel de influencers con marca</h4></div></div>
-          <p class="names">Giuliana Lourdes &amp; Santino Bellizzi · Emilia Vrancic · Facundo Mey &amp; Malena Riesgo</p>
-          <p class="org">Porfa Café · Amé Amor · Con El Kora</p>
+          <p class="names">Giuliana Lourdes &amp; Santino Bellizzi · Facundo Mey &amp; Malena Riesgo</p>
+          <p class="org">Porfa Café · Con El Kora</p>
           <div class="brands"><span class="logo-tile"><img src="marcas/porfa.png" alt="Porfa Café" width="80" height="32" loading="lazy"></span><span class="logo-tile"><img src="marcas/kora.png" alt="Con El Kora" width="80" height="32" loading="lazy"></span></div>
         </li>
         <li class="spk">
@@ -523,6 +541,7 @@
       const input = f.querySelector('input, select');
       const v = (input.value || '').trim();
       let valid = v.length > 0;
+      if (f.dataset.type === 'radio') valid = !!f.querySelector('input:checked');
       if (f.dataset.type === 'email') valid = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v);
       if (f.dataset.type === 'dni') valid = /^\d{7,8}$/.test(v);
       f.classList.toggle('error', !valid);
