@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="155 88 735 735">
+  <rect x="155" y="88" width="735" height="735" rx="90" fill="#fff"/>
+  <g fill="#000">
+    <polygon points="175,478 175,245 252,245 322,412 392,245 470,245 470,478 412,478 412,365 348,478 296,478 233,365 233,478"/>
+    <polygon points="515,478 515,245 575,245 575,330 665,245 745,245 640,345 715,478 645,478 595,390 575,410 575,478"/>
+    <polygon points="678,245 880,245 880,297 808,297 808,478 750,478 750,297 678,297"/>
+  </g>
+  <polygon fill="#EA5E2E" points="165,478 850,430 800,530 865,610 178,660 215,568"/>
+  <text x="518" y="602" transform="rotate(-4 518 560)" text-anchor="middle" fill="#fff"
+        font-family="'Arial Black','Helvetica Neue',Arial,sans-serif" font-weight="900"
+        font-size="118" letter-spacing="30">FEST</text>
+</svg>
