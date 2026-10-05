@@ -148,6 +148,12 @@
   .spk-top{ display:flex; align-items:center; gap:14px; }
   .avatar{ width:54px; height:54px; flex:0 0 54px; border-radius:50%; background:var(--navy); color:var(--orange);
     display:flex; align-items:center; justify-content:center; font-weight:800; font-size:19px; letter-spacing:0.5px; }
+  .avatar.photo{ width:72px; height:72px; flex:0 0 72px; overflow:hidden; background:var(--orange); }
+  .avatar.photo img, .avatar-stack img{ width:100%; height:100%; object-fit:cover; display:block; }
+  .avatar-stack{ display:flex; flex:0 0 auto; }
+  .avatar-stack img{ width:56px; height:56px; border-radius:50%; border:3px solid var(--white); background:var(--orange); margin-left:-14px; }
+  .avatar-stack img:first-child{ margin-left:0; }
+  .spk-top:has(.avatar-stack){ flex-direction:column; align-items:flex-start; gap:12px; }
   .spk.panel .avatar{ background:var(--blue-light); color:var(--navy); font-size:13px; letter-spacing:1px; }
   .spk.surprise{ background:var(--navy); color:var(--white); border-top-color:var(--orange); }
   .spk.surprise .avatar{ background:var(--orange); color:var(--navy); font-size:26px; }
@@ -328,7 +334,7 @@
     <div class="day-head"><h3>Martes 27</h3><span>14 a 21 hs</span></div>
     <ul class="speakers">
         <li class="spk">
-          <div class="spk-top"><div class="avatar" aria-hidden="true">JO</div><div><span class="time">14:20</span><h4>Julián Ocampo</h4></div></div>
+          <div class="spk-top"><div class="avatar photo"><img src="speakers/julian-ocampo.jpg" alt="Julián Ocampo" loading="lazy" width="160" height="160"></div><div><span class="time">14:20</span><h4>Julián Ocampo</h4></div></div>
           <p class="org">Play x Fun · Escuela UGC</p>
           <p class="talk">Cómo vender en Instagram Stories</p>
         </li>
@@ -348,17 +354,17 @@
           <p class="org">Porfa Café · Amé Amor · Con El Kora</p>
         </li>
         <li class="spk">
-          <div class="spk-top"><div class="avatar" aria-hidden="true">FF</div><div><span class="time">17:10</span><h4>Federico Feres</h4></div></div>
+          <div class="spk-top"><div class="avatar photo"><img src="speakers/federico-feres.jpg" alt="Federico Feres" loading="lazy" width="160" height="160"></div><div><span class="time">17:10</span><h4>Federico Feres</h4></div></div>
           <p class="org">Go For Marketing &amp; Go For Last Mile</p>
           <p class="talk">Cuando la IA decide por el cliente</p>
         </li>
         <li class="spk">
-          <div class="spk-top"><div class="avatar" aria-hidden="true">CD</div><div><span class="time">17:45</span><h4>Celeste D’Andrea</h4></div></div>
+          <div class="spk-top"><div class="avatar photo"><img src="speakers/celeste-dandrea.jpg" alt="Celeste D’Andrea" loading="lazy" width="160" height="160"></div><div><span class="time">17:45</span><h4>Celeste D’Andrea</h4></div></div>
           <p class="org">Especialista en e-commerce · Tiendanube</p>
           <p class="talk">El motor de tu negocio: cómo escalar con el ecosistema Tiendanube</p>
         </li>
         <li class="spk">
-          <div class="spk-top"><div class="avatar" aria-hidden="true">MR</div><div><span class="time">18:15</span><h4>Marcelo Romeo</h4></div></div>
+          <div class="spk-top"><div class="avatar photo"><img src="speakers/marcelo-romeo.jpg" alt="Marcelo Romeo" loading="lazy" width="160" height="160"></div><div><span class="time">18:15</span><h4>Marcelo Romeo</h4></div></div>
           <p class="org">CEO y Partner de Agens</p>
         </li>
         <li class="spk panel">
@@ -367,9 +373,13 @@
           <p class="org">PepsiCo · Hudson Kitchenware</p>
         </li>
         <li class="spk">
-          <div class="spk-top"><div class="avatar" aria-hidden="true">CS</div><div><span class="time">20:00</span><h4>Catalina Smidt</h4></div></div>
+          <div class="spk-top"><div class="avatar photo"><img src="speakers/catalina-smidt.jpg" alt="Catalina Smidt" loading="lazy" width="160" height="160"></div><div><span class="time">20:00</span><h4>Catalina Smidt</h4></div></div>
           <p class="org">Brand, Menu &amp; Innovation Grouper · Arcos Dorados (McDonald’s)</p>
           <p class="talk">McDonald’s, el caso mundialista que rompe récords</p>
+        </li>
+        <li class="spk surprise">
+          <div class="spk-top"><div class="avatar" aria-hidden="true">?</div><div><span class="time">20:30</span><h4>Invitado sorpresa</h4></div></div>
+          <p class="talk">Falta poco para que lo conozcas. ¡Muy pronto lo revelamos!</p>
         </li>
     </ul>
   </div>
@@ -377,22 +387,26 @@
   <div class="day">
     <div class="day-head"><h3>Miércoles 28</h3><span>14 a 21 hs</span></div>
     <ul class="speakers">
+        <li class="spk surprise">
+          <div class="spk-top"><div class="avatar" aria-hidden="true">?</div><div><span class="time">14:20</span><h4>Invitado sorpresa</h4></div></div>
+          <p class="talk">Falta poco para que lo conozcas. ¡Muy pronto lo revelamos!</p>
+        </li>
         <li class="spk panel">
-          <div class="spk-top"><div class="avatar" aria-hidden="true">PANEL</div><div><span class="time">15:00</span><h4>Panel</h4></div></div>
+          <div class="spk-top"><div class="avatar-stack"><img src="speakers/sabrina-kolod.jpg" alt="Sabrina Kolod" loading="lazy" width="160" height="160"><img src="speakers/aldana-abadi.jpg" alt="Aldana Abadi" loading="lazy" width="160" height="160"><img src="speakers/carolina-dubiansky.jpg" alt="Carolina Dubiansky" loading="lazy" width="160" height="160"></div><div><span class="time">15:00</span><h4>Panel</h4></div></div>
           <p class="names">Sabrina Kolod · Aldana Abadi · Carolina Dubiansky</p>
         </li>
         <li class="spk">
-          <div class="spk-top"><div class="avatar" aria-hidden="true">CG</div><div><span class="time">15:45</span><h4>Carolina Geler</h4></div></div>
+          <div class="spk-top"><div class="avatar photo"><img src="speakers/carolina-geler.jpg" alt="Carolina Geler" loading="lazy" width="160" height="160"></div><div><span class="time">15:45</span><h4>Carolina Geler</h4></div></div>
           <p class="org">Komin Sabor Digital</p>
         </li>
         <li class="spk panel">
-          <div class="spk-top"><div class="avatar" aria-hidden="true">PANEL</div><div><span class="time">16:15</span><h4>Panel de franquicias</h4></div></div>
+          <div class="spk-top"><div class="avatar-stack"><img src="speakers/sebastian-rios.jpg" alt="Sebastián Ríos" loading="lazy" width="160" height="160"><img src="speakers/alejo-canudas.jpg" alt="Alejo Canudas" loading="lazy" width="160" height="160"><img src="speakers/emiliano-baratz.jpg" alt="Emiliano Baratz" loading="lazy" width="160" height="160"></div><div><span class="time">16:15</span><h4>Panel de franquicias</h4></div></div>
           <p class="names">Sebastián Ríos · Alejo Canudas · Emiliano Baratz · <em>Modera:</em> Adolfo Wiegrebe</p>
           <p class="org">Grupo RE · Canudas Franquicias · La Pinocha</p>
           <p class="talk">Marcas en expansión: marketing para impulsar franquicias</p>
         </li>
         <li class="spk panel">
-          <div class="spk-top"><div class="avatar" aria-hidden="true">PANEL</div><div><span class="time">17:10</span><h4>Panel gamer</h4></div></div>
+          <div class="spk-top"><div class="avatar-stack"><img src="speakers/valentin-rementeria.jpg" alt="Valentín Rementería" loading="lazy" width="160" height="160"><img src="speakers/lautaro-bordon.jpg" alt="Lautaro Bordón" loading="lazy" width="160" height="160"></div><div><span class="time">17:10</span><h4>Panel gamer</h4></div></div>
           <p class="names">Valentín Rementería · Lautaro Bordón · <em>Invitado sorpresa</em> · <em>Modera:</em> Lucas Landa</p>
           <p class="org">KRU · Shell · Logitech</p>
         </li>
@@ -406,12 +420,16 @@
           <p class="org">CCU · Pickit · Mercado Libre · Coto</p>
         </li>
         <li class="spk">
-          <div class="spk-top"><div class="avatar" aria-hidden="true">MF</div><div><span class="time">19:00</span><h4>Mariano Félix Rica &amp; Francisco Grancelli</h4></div></div>
+          <div class="spk-top"><div class="avatar-stack"><img src="speakers/mariano-felix-rica.jpg" alt="Mariano Félix Rica" loading="lazy" width="160" height="160"><img src="speakers/francisco-grancelli.jpg" alt="Francisco Grancelli" loading="lazy" width="160" height="160"></div><div><span class="time">19:00</span><h4>Mariano Félix Rica &amp; Francisco Grancelli</h4></div></div>
           <p class="org">Meta · Regional Client Solutions Partner · Regional Retail &amp; Tech Client Partner</p>
           <p class="talk">Cooling Break: aprovechar la pausa para entender el nuevo juego digital</p>
         </li>
+        <li class="spk surprise">
+          <div class="spk-top"><div class="avatar" aria-hidden="true">?</div><div><span class="time">20:00</span><h4>Invitado sorpresa</h4></div></div>
+          <p class="talk">Falta poco para que lo conozcas. ¡Muy pronto lo revelamos!</p>
+        </li>
         <li class="spk">
-          <div class="spk-top"><div class="avatar" aria-hidden="true">TC</div><div><span class="time">20:30</span><h4>Tomás Cazalá</h4></div></div>
+          <div class="spk-top"><div class="avatar photo"><img src="speakers/tomas-cazala.jpg" alt="Tomás Cazalá" loading="lazy" width="160" height="160"></div><div><span class="time">20:30</span><h4>Tomás Cazalá</h4></div></div>
           <p class="org">DT · DD · Flashtag</p>
         </li>
     </ul>
@@ -432,9 +450,6 @@
   <div class="orgs">
     <h3>Organizan</h3>
     <ul>
-      <li>Tomás Cazalá</li>
-      <li>Se Nos Fue de las Manos</li>
-      <li>Cuerpo docente de Marketing Digital</li>
       <li>Secretaría de Graduados</li>
       <li>Centro de Estudiantes</li>
       <li>Facultad de Ciencias Económicas</li>
