@@ -171,10 +171,13 @@
   .sponsors-wrap{ background:var(--navy); color:var(--white); }
   .sponsors-wrap .section-title{ color:var(--white); }
   .sponsors-wrap .section-lead{ color:var(--blue-light); }
-  .sponsor-grid{ display:grid; grid-template-columns:repeat(auto-fill,minmax(200px,1fr)); gap:16px; list-style:none; margin:0 0 64px; padding:0; }
+  .sp-sub{ font-family:var(--display); font-weight:800; font-size:20px; text-transform:uppercase; margin:0 0 16px; color:var(--orange); }
+  .sponsor-grid{ display:grid; grid-template-columns:repeat(auto-fill,minmax(200px,1fr)); gap:16px; list-style:none; margin:0 0 48px; padding:0; }
+  .sponsor-grid li:not(.sponsor-slot){ background:var(--white); border-radius:3px; aspect-ratio:3/2; display:flex; align-items:center; justify-content:center; padding:18px; }
+  .sponsor-grid.main .sponsor-slot{ max-width:320px; }
   .sponsor-slot{ aspect-ratio:3/2; border:1.5px dashed var(--blue); border-radius:3px; display:flex; align-items:center; justify-content:center;
     color:var(--blue); font-weight:700; font-size:14px; letter-spacing:1.5px; text-transform:uppercase; }
-  .sponsor-grid img{ max-width:80%; max-height:70%; object-fit:contain; }
+  .sponsor-grid img{ max-width:100%; max-height:100%; object-fit:contain; display:block; }
   .orgs h3{ font-family:var(--display); font-weight:800; font-size:20px; text-transform:uppercase; margin:0 0 16px; color:var(--orange); }
   .orgs ul{ list-style:none; margin:0; padding:0; display:flex; flex-wrap:wrap; gap:10px; }
   .orgs li{ background:var(--white); color:var(--navy); font-weight:600; font-size:14px; padding:9px 14px; border-radius:3px; }
@@ -335,7 +338,7 @@
     <ul class="speakers">
         <li class="spk">
           <div class="spk-top"><div class="avatar photo"><img src="speakers/julian-ocampo.jpg" alt="Julián Ocampo" loading="lazy" width="160" height="160"></div><div><span class="time">14:20</span><h4>Julián Ocampo</h4></div></div>
-          <p class="org">Play x Fun · Escuela UGC</p>
+          <p class="org">Influencer y Founder · Escuela de UGC</p>
           <p class="talk">Cómo vender en Instagram Stories</p>
         </li>
         <li class="spk">
@@ -355,12 +358,12 @@
         </li>
         <li class="spk">
           <div class="spk-top"><div class="avatar photo"><img src="speakers/federico-feres.jpg" alt="Federico Feres" loading="lazy" width="160" height="160"></div><div><span class="time">17:10</span><h4>Federico Feres</h4></div></div>
-          <p class="org">Go For Marketing &amp; Go For Last Mile</p>
+          <p class="org">CEO y Founder Go For Marketing &amp; eCommerce · Founder Go For Last Mile</p>
           <p class="talk">Cuando la IA decide por el cliente</p>
         </li>
         <li class="spk">
           <div class="spk-top"><div class="avatar photo"><img src="speakers/celeste-dandrea.jpg" alt="Celeste D’Andrea" loading="lazy" width="160" height="160"></div><div><span class="time">17:45</span><h4>Celeste D’Andrea</h4></div></div>
-          <p class="org">Especialista en e-commerce · Tiendanube</p>
+          <p class="org">Especialista en e-Commerce · Tiendanube</p>
           <p class="talk">El motor de tu negocio: cómo escalar con el ecosistema Tiendanube</p>
         </li>
         <li class="spk">
@@ -393,21 +396,22 @@
         </li>
         <li class="spk panel">
           <div class="spk-top"><div class="avatar-stack"><img src="speakers/sabrina-kolod.jpg" alt="Sabrina Kolod" loading="lazy" width="160" height="160"><img src="speakers/aldana-abadi.jpg" alt="Aldana Abadi" loading="lazy" width="160" height="160"><img src="speakers/carolina-dubiansky.jpg" alt="Carolina Dubiansky" loading="lazy" width="160" height="160"></div><div><span class="time">15:00</span><h4>Panel</h4></div></div>
-          <p class="names">Sabrina Kolod · Aldana Abadi · Carolina Dubiansky</p>
+          <p class="names">Sabrina Kolod <em>(Lic. en Marketing y speaker)</em> · Aldana Abadi <em>(content creator y creativa digital)</em> · Carolina Dubiansky <em>(Fundadora y CEO · Influencers)</em> · <em>Modera:</em> Tomás Cazalá</p>
         </li>
         <li class="spk">
           <div class="spk-top"><div class="avatar photo"><img src="speakers/carolina-geler.jpg" alt="Carolina Geler" loading="lazy" width="160" height="160"></div><div><span class="time">15:45</span><h4>Carolina Geler</h4></div></div>
-          <p class="org">Komin Sabor Digital</p>
+          <p class="org">Founder &amp; CEO · Komin Sabor Digital</p>
+          <p class="talk">Tu próximo cliente está scrolleando con hambre</p>
         </li>
         <li class="spk panel">
           <div class="spk-top"><div class="avatar-stack"><img src="speakers/sebastian-rios.jpg" alt="Sebastián Ríos" loading="lazy" width="160" height="160"><img src="speakers/alejo-canudas.jpg" alt="Alejo Canudas" loading="lazy" width="160" height="160"><img src="speakers/emiliano-baratz.jpg" alt="Emiliano Baratz" loading="lazy" width="160" height="160"></div><div><span class="time">16:15</span><h4>Panel de franquicias</h4></div></div>
-          <p class="names">Sebastián Ríos · Alejo Canudas · Emiliano Baratz · <em>Modera:</em> Adolfo Wiegrebe</p>
+          <p class="names">Sebastián Ríos <em>(Director y Fundador, Grupo RE)</em> · Alejo Canudas · Emiliano Baratz · <em>Modera:</em> Adolfo Wiegrebe</p>
           <p class="org">Grupo RE · Canudas Franquicias · La Pinocha</p>
           <p class="talk">Marcas en expansión: marketing para impulsar franquicias</p>
         </li>
         <li class="spk panel">
           <div class="spk-top"><div class="avatar-stack"><img src="speakers/valentin-rementeria.jpg" alt="Valentín Rementería" loading="lazy" width="160" height="160"><img src="speakers/lautaro-bordon.jpg" alt="Lautaro Bordón" loading="lazy" width="160" height="160"></div><div><span class="time">17:10</span><h4>Panel gamer</h4></div></div>
-          <p class="names">Valentín Rementería · Lautaro Bordón · <em>Invitado sorpresa</em> · <em>Modera:</em> Lucas Landa</p>
+          <p class="names">Valentín Rementería <em>(Director de Marketing, KRU)</em> · Lautaro Bordón <em>(Responsable Marketing &amp; Gaming, Shell)</em> · <em>Invitado sorpresa</em> · <em>Modera:</em> Lucas Landa</p>
           <p class="org">KRU · Shell · Logitech</p>
         </li>
         <li class="spk surprise">
@@ -421,7 +425,7 @@
         </li>
         <li class="spk">
           <div class="spk-top"><div class="avatar-stack"><img src="speakers/mariano-felix-rica.jpg" alt="Mariano Félix Rica" loading="lazy" width="160" height="160"><img src="speakers/francisco-grancelli.jpg" alt="Francisco Grancelli" loading="lazy" width="160" height="160"></div><div><span class="time">19:00</span><h4>Mariano Félix Rica &amp; Francisco Grancelli</h4></div></div>
-          <p class="org">Meta · Regional Client Solutions Partner · Regional Retail &amp; Tech Client Partner</p>
+          <p class="org">Meta · Regional Client Solutions Manager · Regional Retail &amp; Tech Client Partner</p>
           <p class="talk">Cooling Break: aprovechar la pausa para entender el nuevo juego digital</p>
         </li>
         <li class="spk surprise">
@@ -430,7 +434,7 @@
         </li>
         <li class="spk">
           <div class="spk-top"><div class="avatar photo"><img src="speakers/tomas-cazala.jpg" alt="Tomás Cazalá" loading="lazy" width="160" height="160"></div><div><span class="time">20:30</span><h4>Tomás Cazalá</h4></div></div>
-          <p class="org">DT · DD · Flashtag</p>
+          <p class="org">Founder &amp; CEO · DT Comunicación · Flashtag · Doble Dosis</p>
         </li>
     </ul>
   </div>
@@ -441,11 +445,25 @@
 <section class="section" id="sponsors" aria-labelledby="t-sponsors">
   <h2 class="section-title" id="t-sponsors"><span class="slash">/</span> Sponsors</h2>
   <p class="section-lead">Las marcas que hacen posible la segunda edición del Marketing Fest.</p>
+  <h3 class="sp-sub">Main sponsor</h3>
+  <ul class="sponsor-grid main">
+    <li class="sponsor-slot">A definir</li>
+  </ul>
+  <h3 class="sp-sub">Marcas que nos acompañan</h3>
   <ul class="sponsor-grid">
-    <li class="sponsor-slot">Próximamente</li>
-    <li class="sponsor-slot">Próximamente</li>
-    <li class="sponsor-slot">Próximamente</li>
-    <li class="sponsor-slot">Próximamente</li>
+    <li><img src="sponsors/flashtag.png" alt="Flashtag"></li>
+    <li><img src="sponsors/marca-aliada.png" alt="Marca que nos acompaña"></li>
+    <li><img src="sponsors/dt-comunicacion.png" alt="DT Comunicación"></li>
+    <li><img src="sponsors/sosh-burger.png" alt="Sosh Burger"></li>
+  </ul>
+  <h3 class="sp-sub">Apoyo institucional</h3>
+  <ul class="sponsor-grid">
+    <li><img src="sponsors/cace.png" alt="CACE — Cámara Argentina de Comercio Electrónico"></li>
+    <li><img src="sponsors/dma.png" alt="DMA — Data &amp; Marketing Association Argentina"></li>
+    <li><img src="sponsors/ecommerce-institute.png" alt="eCommerce Institute"></li>
+    <li><img src="sponsors/cece.png" alt="CECE — Centro de Estudiantes de Ciencias Económicas"></li>
+    <li><img src="sponsors/uba-posgrado-enap.png" alt="UBA Económicas Posgrado — ENAP"></li>
+    <li><img src="sponsors/graduados.png" alt="Secretaría de Graduados — Económicas UBA"></li>
   </ul>
   <div class="orgs">
     <h3>Organizan</h3>
